@@ -1,9 +1,15 @@
 ﻿:: StoryTitle
 weightless
 
+:: StoryData
+{
+	"ifid": "32AEC7D5-EEBE-4CD8-84AC-4FC66BF76F48"
+}
+
 :: UserScript[script]
 Config.cleanupWikifierOutput = true;
 Config.passages.nobr = false;
+
 
 /* HypeTwineStage. copyright (c) 2018 Max Ziebell (https://maxziebell.de). MIT-license */
 
