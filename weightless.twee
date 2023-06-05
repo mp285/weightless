@@ -408,7 +408,7 @@ A taxi! Pivoting quickly away from the late afternoon sun, you dash into the str
 
 
 :: dive [video] {"position":"1500,1298","size":"100,100"}
-<div class="fade-in">//You glance a woman walking along the shore. Respectful of the gather, you focus on her feet. Something in her stride reminds you of a recent dream, which you feel like you can remember, even though you can't quite recall. It's like it's been remixed with the story of the first walker. But instead of the ocean, her dive into weightlessness plunges her into the street, embracing her as gently as any water...//</div>
+<div class="fade-in">//You glance at a woman walking along the shore. Respectful of the gather, you focus on her feet. Something in her stride reminds you of a recent dream, which you feel like you can remember, even though you can't quite recall. It's like it's been remixed with the story of the first walker. But instead of the ocean, her dive into weightlessness plunges her into the street, embracing her as gently as any water...//</div>
 
 <<timed 10s>> <div class="fade-in"><video poster="" 
 	style="width: 100%" 
