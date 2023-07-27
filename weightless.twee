@@ -62,7 +62,6 @@ Your stomach [[reacts first->Walk]]. //Please let this be it//. You grab your ba
 <</hypeEmbedAndCode>></div>
 
 
-
 :: Arrive [beach] {"position":"1404,502","size":"100,200"}
 <div class="text-tt">
 Your speed has paid off. As the clouds gather, you remove your rolled [[rushmat]] and large collapsible umbrella from the tubular carrier slung across your shoulders. Around the edges, you have carefully sewn bits of fabric.<br>
@@ -80,7 +79,6 @@ Taking a bite from your spirulina bar, you remember how K's hilariously edgy sto
 It was [[mesmerizing]]. 
 </div>
 <<set $beachdance to $beachdance + 1>>
-
 
 
 :: Bel-glance [brother memory programming] {"position":"1050,525","size":"100,200"}
@@ -109,6 +107,7 @@ A trance-like state that follows a telling.
 
 
 :: FROGGER [office] {"position":"466,402","size":"100,100"}
+<<run $playlist.push('song2')>>
 <div class="grid-container">
 <div class="item2">
 You feel good about your decision. //Why fight it?// you think, hopping along. With each resourceful leap, you grow more impressed with your committment to lilypads.<br>
@@ -213,6 +212,10 @@ This is the footer!
 <<run DebugView.disable()>>
 
 
+:: Playlist {"position":"350,950","size":"100,100"}
+<<for _i to 0; _i lt $playlist.length; _i++>>
+$playlist[_i]
+<</for>>
 
 
 :: Reading this project [frame] {"position":"100,624","size":"100,100"}
@@ -242,8 +245,6 @@ You grin, looking at your own office snack. "Same!" [[you swipe back ->Kaykay]]<
 	<source src="https://weightless.mp285.com/videos/KKtext1-2.mp4" type="video/mp4"> Your browser does not support the video tag.</video>
 </div></div></div>
 
- 
-
 
 :: Seaware [info] {"position":"2213,223","size":"100,100"}
 !Seaware
@@ -252,8 +253,7 @@ Lightweight and soft to the touch, seaware is often heralded as one of the inven
 
 <<return>>
 
-<<set $infos to $infos + 1>>          
-
+<<set $infos to $infos + 1>>
 
 
 :: Start [info frame] {"position":"425,150","size":"100,100"}
@@ -280,7 +280,6 @@ Ready to begin? <br>
 
 
 :: StoryDisplayTitle {"position":"100,375","size":"100,100"}
-
 Let Us 
 Be 
 Weightless
@@ -302,10 +301,14 @@ Weightless
 <<set $ocean to 0>>
 <<set $transit to 0>>
 
+<<set $playlist to []>>
+
 
 :: StoryMenu {"position":"99,499","size":"100,100"}
 [[Reading this project]]
 [[About]]
+[[Playlist]]
+
 
 
 :: StoryShare {"position":"221,240","size":"100,100"}
@@ -328,19 +331,20 @@ The taxi [[rushes along toward the water.->Arrive]]
 </div>
 
 
-:: WORK [office] {"position":"687,399","size":"100,100"}
+:: WORK [office] {"position":"700,400","size":"100,100"}
 <div class="grid-container">
 <div class="item2">Meh.<br>
 
 Somehow your work hasn't managed to move itself along without you. Deep breath as you grab a powerbar from your precious office snack stash. Taking a bite, you feel yourself relax as your eyes land on the bar's bluegreen surface, its little sesame seeds looking like tiny tadpoles darting off to a great adventure.<br>
 
-Refreshed and inspired in all the wrong ways, you instead return to your game. You feel good about your decision. //Is this a metaphor?// you wonder as you hop along, impressed with your own enterprising frogginess
+Refreshed and inspired in all the wrong ways, you instead return to your game. You feel good about your decision. //Is this a metaphor?// you wonder as you hop along, impressed with your own enterprising frogginess.
 
 <br>
 <<include "frogger-work-phone">>
 
-</div><div class="item3"><iframe src="https://scratch.mit.edu/projects/91772747/embed" width="425px" height="600px" scrolling="no" autoplay="true"></iframe></div></div>
+</div><div class="item3"><iframe src="https://scratch.mit.edu/projects/91772747/embed" width="425px" height="600px" scrolling="no" autoplay="true"></iframe></div></div>	
 
+<<run $playlist.push('<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3eZTZlnRc8pMe5K1ClzXU2?utm_source=generator&theme=0" width="60%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>')>>
 
 
 :: Walk [video] {"position":"1175,200","size":"100,100"}
@@ -386,7 +390,7 @@ A taxi! Pivoting quickly away from the late afternoon sun, you dash into the str
 
 <<set $transit to $infos + 1>>
 
-[[Bel-glance]] 
+[[Bel-glance]]
 
 
 :: add this song to playlist {"position":"103,891","size":"100,100"}
@@ -417,8 +421,6 @@ A taxi! Pivoting quickly away from the late afternoon sun, you dash into the str
 	<source src="https://weightless.mp285.com/videos/conch-dream-red.mp4" type="video/mp4"> Your browser does not support the video tag.</video> </div> <</timed>>
 
 
-
-
 :: frogger-work-phone {"position":"575,448","size":"100,100"}
 <<timed 8s>><div class="fade-in">Your phone is chiming.</div><</timed>>
 <<nobr>><<timed 12s>>Pausing your game, you breeze you hand above the phone screen, [[pulling open a conversation->Same]] with your friend Kaykay.<</timed>>
@@ -431,6 +433,7 @@ A taxi! Pivoting quickly away from the late afternoon sun, you dash into the str
 
 
 :: go [office] {"position":"579,265","size":"100,100"}
+
 <div class="grid-container">
 <div class="item2">You are sitting at your desk, mindlessly leaping along. You have pretty much given up on //not// being distracted.<br>
 
@@ -446,6 +449,8 @@ or<br>
 
 <div class="item3"><iframe src="https://scratch.mit.edu/projects/91772747/embed" width="425px" height="600px" scrolling="no" autoplay="true"></iframe></div></div>
 
+<<run $playlist.push('song0')>>
+
 
 :: listy {"position":"2400,22","size":"100,100"}
 <<actions [[rushmat]] [[Seaware]] [[tincture]] [[whetting bottle]] >>
@@ -456,8 +461,6 @@ Unexpectedly, your mind flashes to another scene, the first time you felt like y
 
 <<return>>
 <<set $tears to $tears + 1>>
-
-
 
 
 :: mesmerizing [video] {"position":"798,599","size":"100,200"}
@@ -502,7 +505,7 @@ But lately the rains have been fewer and farther between. The difference has bee
 
 <<set $transit to $transit + 2>>
 
-[[Bel-glance]] 
+[[Bel-glance]]
 
 
 :: rushmat [info] {"position":"2216,96","size":"100,100"}
@@ -511,7 +514,6 @@ A simple lightweight mat, woven from rushes. It is used for sitting on the shore
 
 <<return>>
 <<set $infos to $infos + 1>>
-
 
 
 :: shoreline {"position":"1201.6666666666667,901.6666666666666","size":"200,200"}
@@ -552,7 +554,6 @@ video {
 </video></div>
 
 <<audio "slip" volume .75 fadeoverto 17 0>>
-
 
 
 :: special relationship [info] {"position":"2500,700","size":"100,100"}
@@ -604,8 +605,6 @@ You almost crash into a person waiting at the light , loting you
 back into the present
 
 
-
-
 :: uncle {"position":"1751,1100","size":"100,100"}
 <style>
 .passage {
@@ -636,7 +635,6 @@ You feel your face darkening, but your uncle's kind grin erases some of the sham
 <<set $tears to $tears + 1>>
 
 
-
 :: whet [code] {"position":"1703,698","size":"200,200"}
 <div class="text-tt">
 Your body relaxes as you cross your legs, nestling your glass [[whetting bottle]] in the crook between ankle and thigh. You've been carrying the bottle for days, storm waiting. The metal is cool against your legs in the heavy air.<br>
@@ -663,7 +661,7 @@ You smile, thinking about how difficult it used to be to resist yelling out a gr
 Always glass. Most talkers are given or asked to find a bottle as they approach adolescence.
 
 <<return>>
-<<set $infos to $infos + 1>> 
+<<set $infos to $infos + 1>>
 
 
 :: StoryScript [script]
@@ -906,7 +904,6 @@ UIBar.stow();
 
 /* Set work path for Hype ressources */
 HypeTwineStage.setServerPath('https://weightless.mp285.com/anima/');
-
 
 :: StoryStylesheet [stylesheet]
 @import url('https://fonts.googleapis.com/css?family=Kavivanar:400,700,400italic,700italic');
@@ -1790,5 +1787,3 @@ background-color: #f1efe9;
 #menu-item-share a:before {
 	content: "\e82f\00a0";
 }
-  
-
