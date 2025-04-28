@@ -1786,4 +1786,6 @@ background-color: #f1efe9;
 }
 #menu-item-share a:before {
 	content: "\e82f\00a0";
+}
+  
 
